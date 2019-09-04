@@ -24,14 +24,17 @@ There are four plots in this submission, with their corresponding 480 pixel by 4
 Plot 1 is a histogram of Global_active_power. In the script:
 hist(hld_power_slim$Global_active_power, col="red",
      main="Global Active Power", xlab="Global Active Power (kilowatts)")
+     
 Plot 2 is a line plot of Global Active Power (kilowatts) over the continuous two day period encompassing February 1 and February 2, 2007. In the script:
 plot(DateTimePlot,hld_power_slim$Global_active_power, xlab="",
      type="l", ylab="Global Active Power (kilowatts)")
+     
 Plot 3 is a line plot of three distributions of Sub metering. In the script:
 plot(DateTimePlot,hld_power_slim$Sub_metering_1, col="black", xlab="",
      type="l", ylab="Energy sub metering")
 lines(DateTimePlot,hld_power_slim$Sub_metering_2, col="red", type="l")
 lines(DateTimePlot,hld_power_slim$Sub_metering_3, col="blue", type="l")
+
 Finally, Plot 4 is a two by two plot combining plots 2 and 3, as described previously, and two additional plots; one for Voltage over time, and another for global reactive power over time. In the script:
 par(mfrow = c(2,2), mar = c(5,5,2,2))
 plot 2, as above, in the (1,1) position.
